@@ -21,7 +21,8 @@
   "scripts": {
     "dev:server": "nodemon ./server/server.js",
     "populate-db": "node ./server/scripts/populateDatabase.js",
-    "server": "node ./server/server.js"
+    "server": "node ./server/server.js",
+    "run-db": "\"A:\\MongoDB\\Server\\5.0\\bin\\mongod.exe\" --dbpath=\"A:\\MongoDB\\Server\\5.0\\data\""
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

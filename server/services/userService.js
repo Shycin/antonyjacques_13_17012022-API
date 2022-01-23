@@ -29,7 +29,7 @@ module.exports.createUser = async serviceData => {
 
 module.exports.getUserProfile = async serviceData => {
   try {
-    const jwtToken = serviceData.headers.authorization.split('Bearer')[1].trim()
+    const jwtToken = serviceData.headers.authorization.split('Bearer')[0].trim()
     const decodedJwtToken = jwt.decode(jwtToken)
     const user = await User.findOne({ _id: decodedJwtToken.id })
 
